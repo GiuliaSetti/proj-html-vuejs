@@ -1,8 +1,10 @@
+// per il container centrato
 @mixin centered(){
     max-width: 1200px;
     margin: 0 auto;
 }
 
+// per i flex_____
 @mixin flexBetween(){
     display: flex;
     flex-flow: row nowrap;
@@ -14,9 +16,45 @@
     display: flex;
 }
 
+
+// per i bottoni
 @mixin buttonStyle{
     padding: 10px 20px;
     border-radius: 20px;
     letter-spacing: 3px;
     font-weight: bold;
 }
+
+@mixin whiteBorder(){
+    color: white;
+    border: 3px white solid;
+    background-color: rgba(255, 255, 255, 0.146);
+    cursor: pointer;
+
+    &:hover{
+        background-color: transparent;
+    }
+}
+
+
+// per i titoli
+@mixin titleStyle(){
+    letter-spacing: 5px;
+    font-size: 40px;
+
+    text-align: center;
+}
+
+@mixin titleFlex(){
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+// per le linee
+@mixin line(){
+    width: 250px;
+    height: 0.8px;
+    background-color: $gray;
+}
+

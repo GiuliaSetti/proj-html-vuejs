@@ -15,7 +15,7 @@ export default{
     <div id="jumbotron">
         <div class="jumbo_text">
             <h1>Brand New Arrivals</h1>
-            <div>NEW COLLECTION FROM NEW YORK</div>
+            <div class="subtitle">NEW COLLECTION FROM NEW YORK</div>
             <div class="button">
                 <button>VIEW ALL</button>
                 <button>LOOKBOOK</button>
@@ -33,7 +33,7 @@ export default{
 
 
     #jumbotron{
-        height: 500px;
+        height: 550px;
         background-image: $bgImg;
         background-size: cover;
         color: white;
@@ -55,22 +55,20 @@ export default{
             gap: 10px;
 
             h1{
-                font-size: 60px
+                font-size: 80px;
+            }
+
+            .subtitle{
+                font-size: 25px;
             }
 
             button{
                 @include buttonStyle();
-
-                color: white;
-                border: 3px white solid;
-                background-color: rgba(255, 255, 255, 0.146);
+                @include whiteBorder();
+                            
                 margin: 0 10px;
 
-                cursor: pointer;
 
-                &:hover{
-                    background-color: transparent;
-                }
             }
         }
     }

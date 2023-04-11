@@ -113,7 +113,7 @@ export default{
                 .cart{
                     padding-left: 50px;
                     padding-right: 40px;
-                    background-color: #f5f5f5;
+                    background-color: $lightGray;
                     color: black;
                     i{
                         padding: 0 10px;
