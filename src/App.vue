@@ -1,10 +1,24 @@
 <script>
 
+import Header from './components/Header.vue'
+
+export default{
+  data(){
+    return{}
+  },
+
+  components:{
+    Header,
+  }
+}
+
 
 </script>
 
 <template>
-  <h1>Ciao</h1>
+
+  <Header></Header>
+
 
 </template>
 

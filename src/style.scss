@@ -2,8 +2,21 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.fa-chevron-down{
+  font-size: 12px;
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
 }
