@@ -3,6 +3,7 @@ import { store } from './store';
 
 import Header from './components/Header.vue'
 import Main from './components/Main.vue'
+import Footer from './components/Footer.vue';
 
 
 export default{
@@ -17,7 +18,7 @@ export default{
   components:{
     Header,
     Main,
-   
+    Footer
 }
 
 
@@ -31,6 +32,8 @@ export default{
   <Header></Header>
 
   <Main></Main>
+
+  <Footer></Footer>
 
 
 </template>
