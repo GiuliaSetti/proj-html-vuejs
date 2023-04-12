@@ -4,6 +4,10 @@ import Featured from './Featured.vue'
 import Collections from './Collections.vue'
 
 import BestSeller from './BestSeller.vue'
+import ViewMore from './ViewMore.vue'
+import NewArrivals from './NewArrivals.vue'
+
+import CustomerReview from './CustomerReview.vue'
 
 
 export default{
@@ -13,10 +17,13 @@ export default{
     },
 
     components:{
-        Featured,
-        Collections,
-        BestSeller,
-    }
+    Featured,
+    Collections,
+    BestSeller,
+    ViewMore,
+    NewArrivals,
+    CustomerReview,
+}
 
 }
 
@@ -28,6 +35,9 @@ export default{
     <Featured></Featured>
     <Collections></Collections>
     <BestSeller></BestSeller>
+    <ViewMore></ViewMore>
+    <NewArrivals></NewArrivals>
+    <CustomerReview></CustomerReview>
     
   
 </template>

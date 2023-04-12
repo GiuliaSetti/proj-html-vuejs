@@ -97,17 +97,11 @@ export default{
             }
 
             .collection_info{
-                position: absolute;
-                top: 50%;
-                right: 50%;
-
+                
+                @include absoluteInfo();
                 text-align: center;
 
-                transform: translateX(50%);
 
-                h3{
-                    font-size: 30px;
-                }
 
                 button{
                     @include buttonStyle();

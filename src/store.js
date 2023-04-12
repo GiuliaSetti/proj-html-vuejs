@@ -32,27 +32,50 @@ export const store = reactive({
       ],
 
 
-      // featured
+      // featusrc
       featured: [
         {
+          id: 'black_elegant_leather_jacket',
           name: 'Black Leather Jacket',
           desc: 'Men, Jackets, Jeans',
-          price: '$235'
+          price: '$235',
+          salePrice: '$200',
         },
         {
+          id: 'black_leather_suit',
           name: 'Black Leather Suit',
           desc: 'Men, Jackets',
-          price: '$176'
+          price: '$176',
+          salePrice: null,
         },
         {
+          id: 'blue_jacket_and_white_stripe_tee',
           name: 'Blue Jacket & Stripe Tee',
           desc: 'Men, Jackets, Suits',
-          price: '$580'
+          price: '$580',
+          salePrice: null,
         },
         {
+          id: 'modern_black_leather_suit',
           name: 'Modern Black Leather Suit',
           desc: 'Men, Jackets',
-          price: '$96'
+          price: '$96',
+          salePrice: null,
+        }
+      ],
+      // test categorie
+      categories: [
+        {
+          name: 'Men',
+          active: true
+        },
+        {
+          name: 'Women',
+          active: false
+        },
+        {
+          name: 'Accessories',
+          active: false
         }
       ],
 

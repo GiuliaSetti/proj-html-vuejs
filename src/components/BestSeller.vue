@@ -22,11 +22,16 @@ export default{
         <div class="best_sellers_container">
             <i class="fa-solid fa-chevron-left"></i>
 
-            <img src="../assets/images/blue_jacket_and_white_stripe_tee-200x260.jpg" alt="">
-            <img src="../assets/images/blue_jacket_and_white_stripe_tee-200x260.jpg" alt="">
-            <img src="../assets/images/blue_jacket_and_white_stripe_tee-200x260.jpg" alt="">
-            <img src="../assets/images/blue_jacket_and_white_stripe_tee-200x260.jpg" alt="">
-            <img src="../assets/images/blue_jacket_and_white_stripe_tee-200x260.jpg" alt="">
+            <div class="best_sellers_images">
+
+                <img src="../assets/images/blue_jacket_and_white_stripe_tee-200x260.jpg" alt="">
+                <img src="../assets/images/blue_jacket_and_white_stripe_tee-200x260.jpg" alt="">
+                <img src="../assets/images/blue_jacket_and_white_stripe_tee-200x260.jpg" alt="">
+                <img src="../assets/images/blue_jacket_and_white_stripe_tee-200x260.jpg" alt="">
+                <img src="../assets/images/blue_jacket_and_white_stripe_tee-200x260.jpg" alt="">
+
+            </div>
+            
 
             <i class="fa-solid fa-chevron-right"></i>
         </div>
@@ -46,6 +51,7 @@ export default{
 
     #best_seller{
         @include centered();
+        
 
         .title{
 
@@ -68,12 +74,36 @@ export default{
         .best_sellers_container{
             position: relative;
 
+            margin: 6rem 0;
+
+
+            .best_sellers_images{
+                
+                @include flex();
+    
+                justify-content: center;
+            }
+
+
 
 
             .fa-solid{
                 position: absolute;
                 top: 50%;
 
+                background-color: gray;
+                color: white;
+
+                padding: 1rem;
+
+            }
+
+            .fa-chevron-left{
+                left:0;
+            }
+
+            .fa-chevron-right{
+                right:0;
             }
         }
 

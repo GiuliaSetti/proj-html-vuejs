@@ -2,24 +2,36 @@
 
 import { store } from '../store';
 
+
 export default{
-    name: 'Featured',
-    data(){
-
-        return{
+    name: "Featured",
+    data() {
+        return {
             store,
-        }
-
+        };
     },
 
-   
+
+    methods:{
+
+        
+        clickCategory(index) {
+            this.store.categories.forEach(button => button.active = false);
+            this.store.categories[index].active = true;
+        },
+
+    }
+
 }
 
 
 </script>
 
 <template>
+
     <div id="featured">
+
+        <!-- titolo sezione  -->
 
         <div class="title">
             <div class="line"></div>
@@ -27,31 +39,37 @@ export default{
             <div class="line"></div>
         </div>
 
+        <!-- sezione bottoni categorie -->
+
         <div class="categories">
             
             <ul class="categories_buttons">
-                <li><button class="active">Men</button></li>
-                <li><button>Women</button></li>
-                <li><button>Accessories</button></li>
+                <li class="featured_button" v-for="(category, index) in store.categories">
+                    <button :class="{active: category.active}" @click="clickCategory(index)">{{category.name}}</button>
+                </li>
             </ul>
 
-            <div class="images">
+        </div>
+
+        <!-- card -->
+
+        <div class="images">
                 <ul class="categories_images">
                     <li v-for="product in store.featured">
-                        <img src="../assets/images/black_elegant_leather_jacket-231x300.jpg" alt="product_image">
+                        <img src="../assets/images/black_leather_jacket-231x300.jpg"  alt="product_image">
 
                         <div class="product_info">
 
                             <h4 class="product_name">{{product.name}}</h4>
                             <div class="product_desc">{{product.desc}}</div>
-                            <div class="product_price">{{product.price}}</div>
 
+                            <div v-if="product.salePrice === null" class="product_price">{{product.price}}</div>
+
+                            <div v-else> <span class="product_price ">{{ product.salePrice }}</span> <span class="product_price underlined">{{ product.price }}</span></div>
                         </div>
                     </li>
                    
                 </ul>
-            </div>
-
         </div>
         
     </div>
@@ -146,6 +164,10 @@ export default{
                 .product_price{
                     font-size: 15px;
                     color: $blue;
+
+                    &.underlined{
+                        text-decoration: line-through;
+                    }
                 }
 
             }
