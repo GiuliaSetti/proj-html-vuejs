@@ -13,11 +13,6 @@ export default{
 <template>
     <div id="new_arrivals">
 
-        <div class="title">
-            <div class="line"></div>
-            <h2>New Arrivals</h2>
-            <div class="line"></div>
-        </div>
 
         <div class="best_sellers_container">
             <i class="fa-solid fa-chevron-left"></i>
@@ -48,23 +43,7 @@ export default{
 
 @import '../style/mixins.scss';
 @import '../style/variables.scss';
-        .title{
-            @include flex();
-            @include titleFlex();
-
-            h2{
-                @include titleStyle();
-            }
-           
-            align-items: center;
-            justify-content: center;
-            gap: 30px;
-
-            .line{
-                @include line();
-            }
-
-        }
+ 
 
         .best_sellers_container{
             position: relative;

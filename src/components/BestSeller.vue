@@ -1,10 +1,12 @@
 <script>
+import VueHorizontal from 'vue-horizontal';
 
 export default{
     name: 'BestSeller',
     data(){
         return{}
-    }
+    },
+    components: {VueHorizontal}
 }
 
 </script>
@@ -12,29 +14,23 @@ export default{
 <template>
 
     <div id="best_seller">
-        <div class="title">
-            <div class="line"></div>
-            <h2>Best Seller</h2>
-            <div class="line"></div>
+      
+        <vue-horizontal responsive>
 
-        </div>
+        </vue-horizontal>
 
-        <div class="best_sellers_container">
-            <i class="fa-solid fa-chevron-left"></i>
+        <vue-horizontal responsive>
 
-            <div class="best_sellers_images">
-
-                <img src="../assets/images/blue_jacket_and_white_stripe_tee-200x260.jpg" alt="">
-                <img src="../assets/images/blue_jacket_and_white_stripe_tee-200x260.jpg" alt="">
-                <img src="../assets/images/blue_jacket_and_white_stripe_tee-200x260.jpg" alt="">
-                <img src="../assets/images/blue_jacket_and_white_stripe_tee-200x260.jpg" alt="">
-                <img src="../assets/images/blue_jacket_and_white_stripe_tee-200x260.jpg" alt="">
-
-            </div>
+            <img src="../assets/images/spring_printed_dress-200x260.jpg" alt="">
+            <img src="../assets/images/modern_love_tee-200x260.jpg" alt="">
+            <img src="../assets/images/black_leather_jacket-200x260.jpg" alt="">
+            <img src="../assets/images/black_elegant_leather_jacket-200x260.jpg" alt="">
+            <img src="../assets/images/hipster_black_top-200x260.jpg" alt="">
+            <img src="../assets/images/modern_leather_boots-200x260.jpg" alt="">
             
-
-            <i class="fa-solid fa-chevron-right"></i>
-        </div>
+                
+        </vue-horizontal>
+        
     </div>
 
   
@@ -50,26 +46,10 @@ export default{
 
 
     #best_seller{
-        @include centered();
+        max-width: 1000px;
+        margin: 5rem auto;
+
         
-
-        .title{
-
-            @include flex();
-            @include titleFlex();
-
-            margin-top: 3rem;
-            
-                
-            h2{
-                @include titleStyle();
-            }
-
-            .line{
-                @include line();
-            }
-
-        }
 
         .best_sellers_container{
             position: relative;

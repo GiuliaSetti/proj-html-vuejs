@@ -32,6 +32,7 @@ export const store = reactive({
       ],
 
 
+
       // featusrc
       featured: [
         {
@@ -78,6 +79,30 @@ export const store = reactive({
           active: false
         }
       ],
+
+      image_URL: '../assets/images/',
+
+      // collections
+      collections:[
+        {
+          img: 'winter_collection_bg.jpg',
+          title: 'Winter Collection',
+          desc: 'stylish and warm',
+        },
+        {
+          img: 'winter_collection_bg.jpg',
+          title: 'Spring Collection',
+          desc: 'bright and colorful',
+        },
+        {
+          img: 'winter_collection_bg.jpg',
+          title: 'Autumn Collection',
+          desc: 'rich and comfortable',
+        },
+      ]
+
+
+
 
 
 });

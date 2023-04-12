@@ -11,6 +11,10 @@ export default{
         };
     },
 
+    props:{
+        product: Object,
+    },
+
 
     methods:{
 
@@ -30,15 +34,7 @@ export default{
 <template>
 
     <div id="featured">
-
-        <!-- titolo sezione  -->
-
-        <div class="title">
-            <div class="line"></div>
-            <h2>Featured Products</h2>
-            <div class="line"></div>
-        </div>
-
+      
         <!-- sezione bottoni categorie -->
 
         <div class="categories">
@@ -56,7 +52,7 @@ export default{
         <div class="images">
                 <ul class="categories_images">
                     <li v-for="product in store.featured">
-                        <img src="../assets/images/black_leather_jacket-231x300.jpg"  alt="product_image">
+                        <img src="../assets/images/black_elegant_leather_jacket-231x300.jpg"  alt="product_image">
 
                         <div class="product_info">
 
