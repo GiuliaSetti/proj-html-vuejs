@@ -1,6 +1,9 @@
 <script>
 
 import BrandLogos from './BrandLogos.vue'
+import Subscribe from './Subscribe.vue';
+import FooterBox from './FooterBox.vue';
+import FooterPayments from './FooterPayments.vue';
 
 export default{
     name: 'Footer',
@@ -9,8 +12,11 @@ export default{
     },
 
     components:{
-        BrandLogos,
-    }
+    BrandLogos,
+    Subscribe,
+    FooterBox,
+    FooterPayments
+}
 }
 
 
@@ -20,6 +26,10 @@ export default{
 <template>
     
     <BrandLogos></BrandLogos>
+    <Subscribe></Subscribe>
+    <FooterBox></FooterBox>
+    <FooterPayments></FooterPayments>
+    
 
 </template>
 

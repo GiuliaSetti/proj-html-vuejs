@@ -99,7 +99,9 @@ export const store = reactive({
           title: 'Autumn Collection',
           desc: 'rich and comfortable',
         },
-      ]
+      ],
+
+      tags: ['Black', 'boots', 'Brown', 'Casual', 'D&G', 'Fabric', 'flowers', 'Grey', 'hot', 'Hipster', 'lines', 'multi-purpose', 'New York', 'Outdoors', 'red', 'responsive', 'summer', 'sweater', 'Travel', 'Warm', 'White', 'winter'],
 
 
 
