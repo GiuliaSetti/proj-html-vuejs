@@ -1,9 +1,13 @@
 <script>
 
+import { store } from '../store';
+
 export default{
     name: 'ViewMore',
     data(){
-        return{}
+        return{
+            store
+        }
     }
 }
 
@@ -14,36 +18,22 @@ export default{
     <div id="section_container">
 
         <div id="cards">
-            <div class="card one">
+            <div v-for="singleCard in store.viewMore" class="card one">
     
-                <img src="../assets/images/promo_box_1_bg.jpg" alt="">
+                <img :src="singleCard.img" alt="">
 
                 <div class="info">
 
-                    <h3>70% OFF!</h3>
+                    <h3>{{singleCard.advantages}}</h3>
 
-                    <div>Testo</div>
+                    <div class="text">{{singleCard.text}}</div>
 
                     <button>VIEW MORE</button>
                     
                 </div>
     
             </div>
-            <div class="card two">
-    
-                <img src="../assets/images/promo_box_2_bg.jpg" alt="">
-
-                <div class="info">
-
-<h3>70% OFF!</h3>
-
-<div>Testo</div>
-
-<button>VIEW MORE</button>
-
-</div>
-    
-            </div>
+            
             
         </div>
     </div>
@@ -85,7 +75,18 @@ export default{
             .info{
                 position: absolute;
                 top: 40%;
-                left: 10%;
+                left: 0;
+
+                padding: 0 30px;
+                
+                h3{
+                    letter-spacing: 3px;
+                    padding: 10px 0;
+                }
+
+                .text{
+                    padding: 20px 0;
+                }
             }
 
             button{

@@ -257,10 +257,12 @@ export const store = reactive({
 
       viewMore:[
         {
+          img:'src/assets/images/promo_box_1_bg.jpg',
           advantages: '70% OFF!',
           text: 'Voluptates quis enim, vitae sunt sed quos blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit.'
         },
         {
+          img:'src/assets/images/promo_box_2_bg.jpg',
           advantages: 'Free Shipping',
           text: 'Voluptates quis enim, vitae sunt sed quos blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit.'
         }
