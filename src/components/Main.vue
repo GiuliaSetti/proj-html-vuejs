@@ -16,6 +16,9 @@ import Reviews from './Reviews.vue'
 import SectionTitle from './SectionTitle.vue';
 import ProductsCard from './ProductsCard.vue';
 
+import SmallCard from './SmallCard.vue';
+
+
 
 export default{
     name: 'Main',
@@ -33,7 +36,8 @@ export default{
     Blog,
     Reviews,
     SectionTitle,
-    ProductsCard
+    ProductsCard,
+    SmallCard
 },
 
 
@@ -59,6 +63,11 @@ export default{
 
         featured() {
             return this.store.products.filter(e => e.featured == true);
+        },
+
+        topRatedInverse() {
+            return this.store.products.filter(e => e.reviews == 5)
+            .reverse();
         },
     }
 
@@ -110,7 +119,15 @@ export default{
 
     </div>
     
-    <Reviews></Reviews>
+    <div class="various_products">
+
+        <SmallCard :smallElements = "featured()"></SmallCard>
+        <SmallCard :smallElements = "onSale()"></SmallCard>
+        <SmallCard :smallElements = "topRated()"></SmallCard>
+        <SmallCard :smallElements = "topRatedInverse()"></SmallCard>
+       
+        
+    </div>
     
   
 </template>

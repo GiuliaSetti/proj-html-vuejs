@@ -164,6 +164,8 @@ export default{
 
                 padding: 1rem;
 
+                display: none;
+
             }
 
             .fa-chevron-left{
@@ -173,6 +175,10 @@ export default{
 
             .fa-chevron-right{
                 right:0;
+            }
+
+            &:hover .fa-solid{
+                display: block;
             }
 
 
