@@ -32,7 +32,8 @@ export default{
                     </span>
                     <div v-if="product.salePrice == null">{{ product.price }}</div>
                     <div v-else>{{ product.salePrice }}
-                        <span class="underlined">{{ product.price }}</span></div>
+                        <span class="underlined">{{ product.price }}</span>
+                    </div>
                 </div>
                 
                 <div class="card_image">
