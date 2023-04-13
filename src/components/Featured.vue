@@ -24,6 +24,8 @@ export default{
             this.store.categories[index].active = true;
         },
 
+      
+
     }
 
 }
@@ -52,7 +54,15 @@ export default{
         <div class="images">
                 <ul class="categories_images">
                     <li v-for="product in store.featured">
-                        <img src="../assets/images/black_elegant_leather_jacket-231x300.jpg"  alt="product_image">
+                        <div class="single_image">
+                            <img class="image" :src="product.id"  alt="product_image">
+
+                            <div class="img_hover">
+                                <i class="fa-regular fa-square-check"></i>
+                            </div>
+                        
+                        </div>
+
 
                         <div class="product_info">
 
@@ -66,6 +76,8 @@ export default{
                     </li>
                    
                 </ul>
+                
+                    
         </div>
         
     </div>
@@ -137,11 +149,50 @@ export default{
         }
 
         .categories_images{
+            position: relative;
             @include flex();
             justify-content: center;
             gap: 30px;
 
             padding: 40px 0;
+
+            .single_image{
+                position: relative;
+                .img_hover {
+                    @include flex();
+                    justify-content: center;
+                    align-items: center;
+
+                    background-image:linear-gradient(#e66465, #9198e5) ;
+
+                    
+                    
+                    font-size: 30px;
+                    position: absolute;
+                    top: 0;
+                    width: 200px;
+                    height: 260px;
+                    opacity: 0;
+                    transition: opacity .5s ease-in;
+
+                    i {
+                        color: white;
+
+                        background-color: $darkGray;
+                        padding: 20px;
+                        border-radius: 50%;
+                        cursor: pointer;
+                    }
+                } 
+                &:hover {
+                    .img_hover {
+                        opacity: 1;
+                    } 
+                }                   
+            }
+
+            
+           
 
             .product_info{
 
@@ -161,18 +212,17 @@ export default{
                     font-size: 15px;
                     color: $blue;
 
-                    &.underlined{
-                        text-decoration: line-through;
-                    }
+                    
                 }
 
             }
           
 
         }
+
+       
         
-        
-        
+
 
     
     }

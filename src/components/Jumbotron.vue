@@ -12,21 +12,21 @@ export default{
             counter: 0,
             jumboSlides:[
                 {
-                    img: '../assets/images/home1_slide_three_bg_2.jpg',
+                    img: 'src/assets/images/home1_slide_three_bg_2.jpg',
                     title: 'Brand New Arrivals',
                     subtitle: 'New Collection from New York',
                     button: 'VIEW ALL',
                     buttonTwo: 'LOOKBOOK',
                 },
                 {
-                    img: '../assets/images/home1_slide_three_bg_2.jpg',
+                    img: 'src/assets/images/home1_slide_one_bg.jpg',
                     title: 'Get the APP!',
                     subtitle: 'Download our Mobile APP',
                     button: 'Get AVADA now!',
                     buttonTwo: 'SHOP',
                 },
                 {
-                    img: '../assets/images/home1_slide_three_bg_2.jpg',
+                    img: 'src/assets/images/home1_slide_2_bg.jpg',
                     title: 'Take a Sneak Peak!',
                     subtitle: 'Choose Categories',
                     button: 'WOMEN',
@@ -78,7 +78,7 @@ export default{
         <i class="fa-solid fa-chevron-left" @click="beforeSlide()"></i>
 
         <div class="jumbotron_image">
-            <img src="../assets/images/home1_slide_three_bg_2.jpg" alt="image">
+            <img :src="jumboSlides[counter].img" alt="image">
         </div>
         
         <div class="jumbo_text">
@@ -102,10 +102,13 @@ export default{
 
 
     #jumbotron{
-        height: 450px;
+        height: 600px;
+
+        margin-bottom: 8rem;
 
        
         .jumbotron_image{
+            height: 100%;
             position: relative;
             
             width: 100%;
@@ -130,6 +133,8 @@ export default{
             transform: translateX(50%);
 
             text-align: center;
+
+            animation: fade 2s;
 
             .subtitle{
                 padding: 1rem 0;
@@ -169,6 +174,14 @@ export default{
             .fa-chevron-right{
                 right:0;
             }
+
+
+    }
+
+    @keyframes fade{
+
+        0% {opacity:0;}
+        100%{opacity: 100%;}
 
 
     }

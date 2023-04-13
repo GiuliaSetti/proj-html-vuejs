@@ -29,7 +29,7 @@ export default{
     
         <div class="collection_card">
 
-            <img src="../assets/images/autumn_collection_bg.jpg" alt="cover">
+            <img :src="cover" alt="cover">
 
             <div class="card_info">
                 <h3 class="card_title">{{ title }}</h3>

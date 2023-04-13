@@ -15,6 +15,8 @@ export default{
             <img src="../assets/images/payment_cards_footer.png" alt="cards">
         </div>
     </div>
+
+
 </template>
 
 <style lang="scss" scoped>

@@ -5,9 +5,11 @@ export default{
 
     data(){
         return{
-
+           
         }
-    }
+    },
+
+
 }
 
 
@@ -62,6 +64,7 @@ export default{
             }
 
             .send_right{
+                position: relative;
                 @include flex(); 
                 gap: 20px;
                 align-items: center;
@@ -76,9 +79,7 @@ export default{
             }
         }
 
-
-
-
+        
         button{
             padding: 10px 40px;
             border-radius: 30px;
