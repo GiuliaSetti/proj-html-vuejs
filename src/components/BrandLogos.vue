@@ -12,6 +12,8 @@ export default{
 <template>
 
     <div id="brand_logos">
+
+        <div class="title">BRAND LOGOS</div>
         <div id="logos">
             
             <img class="logo" src="../assets/images/b_logotype_1.png" alt="logo">
@@ -33,6 +35,12 @@ export default{
     #brand_logos{
 
         background-color: $lightGray;
+
+        .title{
+            text-align: center;
+            padding: 20px 0;
+            color: $darkGray;
+        }
 
         #logos{
             padding: 3rem 0;

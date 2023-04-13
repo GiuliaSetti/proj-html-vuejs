@@ -46,12 +46,19 @@ export default{
         },
 
         newArrivals() {
-            return this.store.products
-                .filter(e => e.newArrival == true)
+            return this.store.products.filter(e => e.newArrival == true)
         },
 
         onSale() {
             return this.store.products.filter((e) => e.salePrice !== null);
+        },
+
+        topRated() {
+            return this.store.products.filter(e => e.reviews == 5);
+        },
+
+        featured() {
+            return this.store.products.filter(e => e.featured == true);
         },
     }
 
@@ -83,9 +90,17 @@ export default{
     
     <!-- /best sellers -->
     
+    <!-- viewmore -->
     <ViewMore></ViewMore>
+    <!-- /viewmore -->
+
+    <!-- new arrivals -->
     <SectionTitle :title="'New Arrivals'" :subtitle="'Brand new products from top Designer'"></SectionTitle>
-    
+    <div class="carousel_container">
+        <ProductsCard :elements="newArrivals()"></ProductsCard>
+    </div>
+    <!-- /new arrivals -->
+
     <Quotes></Quotes>
 
     <SectionTitle :title="'From Our Blog'" :subtitle="'The Latest Classic Shop News'"></SectionTitle>

@@ -170,7 +170,7 @@ export const store = reactive({
           price: '$176',
           salePrice: null,
           bestSeller: false,
-          newArrivals: true,
+          newArrival: true,
         }, 
         {
           id: 'src/assets/images/blue_jacket_and_white_stripe_tee-200x260.jpg',
@@ -178,7 +178,7 @@ export const store = reactive({
           price: '$580',
           salePrice: null,
           bestSeller: true,
-          newArrivals: false,
+          newArrival: false,
         },
         {
           id: 'src/assets/images/blue_leather_jacket-200x260.jpg',
@@ -186,7 +186,7 @@ export const store = reactive({
           price: '$80',
           salePrice: '$60',
           bestSeller: false,
-          newArrivals: true,
+          newArrival: true,
         },
         {
           id: 'src/assets/images/hipster_black_top-200x260.jpg',
@@ -194,7 +194,8 @@ export const store = reactive({
           price: '$57',
           salePrice: null,
           bestSeller: true,
-          newArrivals: true,
+          newArrival: true,
+          featured: true, 
         },
         {
           id: 'src/assets/images/leather_gloves-200x260.jpg',
@@ -202,7 +203,7 @@ export const store = reactive({
           price: '$45',
           salePrice: null,
           bestSeller: false,
-          newArrivals: false,
+          newArrival: false,
         },
         {
           id: 'src/assets/images/modern_leather_boots-200x260.jpg',
@@ -210,17 +211,18 @@ export const store = reactive({
           price: '$60',
           salePrice: '$30',
           bestSeller: false,
-          newArrivals: false,
+          newArrival: false,
         },
 
         {
           id: 'src/assets/images/black_elegant_leather_jacket-200x260.jpg',
-          name: 'Black Leader Jacket',
+          name: 'Black Leather Jacket',
           price: '$235',
           salePrice: '$200',
           reviews: 5,
           bestSeller: true,
-          newArrivals: true,         
+          newArrival: true, 
+          featured: true,        
         },
         {
           id: 'src/assets/images/black_leather_jacket-200x260.jpg',
@@ -229,6 +231,7 @@ export const store = reactive({
           salePrice: null,
           bestSeller: true,
           newArrival: true,
+          featured: true, 
         },
         {
           id: 'src/assets/images/modern_love_tee-200x260.jpg',
@@ -236,7 +239,7 @@ export const store = reactive({
           price: '$40',
           salePrice: null,
           bestSeller: true,
-          newArrivals: true,
+          newArrival: true,
         }, 
         {
           id: 'src/assets/images/spring_printed_dress-200x260.jpg',
@@ -245,7 +248,7 @@ export const store = reactive({
           salePrice: null,
           reviews: 5,
           bestSeller: true,
-          newArrivals: true,
+          newArrival: true,
         },
           
         
