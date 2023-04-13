@@ -121,10 +121,24 @@ export default{
     
     <div class="various_products">
 
-        <SmallCard :smallElements = "featured()"></SmallCard>
-        <SmallCard :smallElements = "onSale()"></SmallCard>
-        <SmallCard :smallElements = "topRated()"></SmallCard>
-        <SmallCard :smallElements = "topRatedInverse()"></SmallCard>
+        <div class="featured">
+            <h4>FEATURED</h4>
+            <SmallCard :smallElements = "featured()"></SmallCard>
+        </div>
+        <div class="on_sale">
+            <h4>ON SALE</h4>
+            <SmallCard :smallElements = "onSale()"></SmallCard>
+        </div>
+        <div class="top_rated">
+            <h4>TOP RATED</h4>
+            <SmallCard :smallElements = "topRated()"></SmallCard>
+        </div>
+        <div class="latest_reviews">
+            <h4>LATEST REVIEWS</h4>
+            <SmallCard :smallElements = "topRatedInverse()"></SmallCard>
+        </div>
+        
+        
        
         
     </div>
@@ -142,7 +156,7 @@ export default{
 }
 
 #blog_posts{
-    margin: 4rem 0;
+    margin: 5rem 0;
 
     @include flex();
     @include centered();
@@ -156,8 +170,18 @@ export default{
     max-width: 1000px;
     margin:  4rem auto;
     overflow-x: scroll;
-
 }
   
+.various_products{
+    padding: 3rem 0;
+    @include flex();
+    @include centered();
 
+    justify-content: space-between;
+
+    h4{
+        padding: 3rem 0;
+        color: $gray;
+    }
+}
 </style>

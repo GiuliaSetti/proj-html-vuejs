@@ -201,6 +201,7 @@ export const store = reactive({
           id: 'src/assets/images/leather_gloves-200x260.jpg',
           name: 'Leather Gloves',
           price: '$45',
+          reviews: 5,
           salePrice: null,
           bestSeller: false,
           newArrival: false,
